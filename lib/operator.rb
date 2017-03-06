@@ -8,18 +8,19 @@ class Operator
   end
 
   def receive(commands)
-    commands.each_char do |command|
-      case command
+    commands.each_char { |command| execute command }
+  end
+
+  private
+
+  def execute(command)
+    case command
       when "L"
         current_rover.turn_left
       when "R"
         current_rover.turn_right
       when "M"
         current_rover.move
-      when 'exit'
-        break
-      end
     end
   end
-  
 end

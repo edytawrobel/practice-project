@@ -33,6 +33,20 @@ describe Operator do
       allow(rover).to receive(:move)
       operator.receive('M')
     end
+
+    it "moves a rover twice forward when instructions are \"MM\"" do
+      allow(rover).to receive(:move).twice
+      operator.receive('MM')
+    end
+
+    it "moves a rover in various directions" do
+      allow(rover).to receive(:move).twice
+      allow(rover).to receive(:turn_left)
+      allow(rover).to receive(:turn_right)
+      allow(rover).to receive(:move)
+      allow(rover).to receive(:move)
+      operator.receive('MMLRMM')
+    end
   end
 
 end
