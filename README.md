@@ -1,5 +1,7 @@
 Problem : Mars Rover
 
+[![Coverage Status](https://coveralls.io/repos/github/edytawrobel/practice-project/badge.svg?branch=master)](https://coveralls.io/github/edytawrobel/practice-project?branch=master)
+
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
 
 A rover’s position and location is represented by a combination of x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
@@ -83,7 +85,7 @@ For testing run the following command:
   As a NASA Operator
   So that I can change the direction a rover's heading
   I would like to be able to instruct a rover to spin 90 degrees left or right
-  
+
   As a NASA Operator,
   So that I can control a rover,
   I'd like it to be able to check its current position and location.
@@ -95,7 +97,7 @@ For testing run the following command:
   As a Rover
   So that I can move effectively within the plateau
   I would like to be able to execute commands given
-  
+
   ```
 
 
