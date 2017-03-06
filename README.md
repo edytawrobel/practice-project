@@ -72,61 +72,45 @@ For testing run the following command:
 #### Created user stories
 
   ```
-  As a NASA Operator
+  As a NASA NagivationSystem
   So that I can proceed with the mission
   I would like to land rovers on plateau
 
-  As a NASA Operator
+  As a NASA NagivationSystem
   So that I can control a rover
   I would like to be able to process the instructions given
 
-  As a NASA Operator
+  As a NASA NagivationSystem
   So that I can change the direction a rover's heading
   I would like to be able to instruct a rover to spin 90 degrees left or right
+  
+  As a NASA NagivationSystem,
+  So that I can control a rover,
+  I'd like it to be able to check its current position and location.
 
-  As a NASA Operator
-  So that I can change the location a rover
+  As a NASA NagivationSystem
+  So that I can change the location of a rover
   I would like to be able to instruct a rover to move one grid forward
-
-  As a Rover
-  So that I can send the view of terrain back to Earth
-  I would like to be able to navigate the plateau's grid
 
   As a Rover
   So that I can move effectively
   I would like to be able to execute commands given
-
-  As a Rover,
-  So that others can verify where I am on the plateau,
-  I'd like it to be able to report my current position and location.
-
+  
   ```
 
 
-  ```
+### Developed Domain Model:
 
-  * Ensure Operator has some rover and some surface to land it on
-  * Ensure Operator can process the input given to instruct a rover accordingly
+| Messages | Objects |
+|:---------|:--------------|
+| validate_instructions, process_instructions | NavigationSystem |
+| turn, move |  NavigationSystem |
+| reports location |  NavigationSystem |
+| has_plateau, explores(instructions)|  Rover |
+| has max_x and max_y coordinates | Plateau |
 
-  * Ensure Rover has some x,y coordinates and direction it is heading towards
-  * Ensure Rover knows of max_x and max_y coordinates of plateau's grid, so it does not fall off
-  * Ensure Rover can report its position and heading back
+ 
 
-  * Ensure Plateau has a grid with max_x and max_y coordinates
-  * Ensure Plateau validates the coordinates given
-
-    ```
-
-  #### Developed the domain model, as follows:
-
-  | Messages | Objects |
-  |:---------|:--------------|
-  | land_rovers (on plateau)| NASA Operator|
-  | process_instructions ("LRM")| NASA Operator|
-  | has_position (x,y), has_location(compass_point) | Rover |
-  | execute_commands: turn_left, turn_right, move_forward | Rover |
-  | report_location | Rover |
-  | has_grid, check_coordinates | Plateau |
 
 * **Building each feature one by one**
   * Wrote unit test
