@@ -72,28 +72,28 @@ For testing run the following command:
 #### Created user stories
 
   ```
-  As a NASA NagivationSystem
+  As a NASA Operator
   So that I can proceed with the mission
   I would like to land rovers on plateau
 
-  As a NASA NagivationSystem
+  As a NASA Operator
   So that I can control a rover
   I would like to be able to process the instructions given
 
-  As a NASA NagivationSystem
+  As a NASA Operator
   So that I can change the direction a rover's heading
   I would like to be able to instruct a rover to spin 90 degrees left or right
   
-  As a NASA NagivationSystem,
+  As a NASA Operator,
   So that I can control a rover,
   I'd like it to be able to check its current position and location.
 
-  As a NASA NagivationSystem
+  As a NASA Operator
   So that I can change the location of a rover
   I would like to be able to instruct a rover to move one grid forward
 
   As a Rover
-  So that I can move effectively
+  So that I can move effectively within the plateau
   I would like to be able to execute commands given
   
   ```
@@ -103,13 +103,10 @@ For testing run the following command:
 
 | Messages | Objects |
 |:---------|:--------------|
-| validate_instructions, process_instructions | NavigationSystem |
-| turn, move |  NavigationSystem |
-| reports location |  NavigationSystem |
+| process_instructions | Operator |
+| turn, move, reports location |  Rover |
 | has_plateau, explores(instructions)|  Rover |
 | has max_x and max_y coordinates | Plateau |
-
- 
 
 
 * **Building each feature one by one**
