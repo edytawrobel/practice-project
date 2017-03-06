@@ -47,6 +47,10 @@ describe Operator do
       allow(rover).to receive(:move)
       operator.receive('MMLRMM')
     end
+
+    xit "receives an invalid command and throws error" do
+      expect { operator.receive('W') }.to raise_error "Invalid character in the move sequence!"
+    end
   end
 
 end
