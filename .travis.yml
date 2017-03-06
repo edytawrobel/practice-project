@@ -1,0 +1,8 @@
+rvm: '2.3.3'
+
+script:
+  - mkdir -p spec && bundle exec rspec spec
+
+before_install:
+- sed -i '2d' Gemfile
+- sudo apt-get update -qq
