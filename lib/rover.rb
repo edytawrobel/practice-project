@@ -21,6 +21,15 @@ class Rover
     @heading = turn('right')
   end
 
+  def move
+    case @heading
+    when :N then @y_coord +=  1
+    when :S then @y_coord += -1
+    when :E then @x_coord +=  1
+    when :W then @x_coord += -1
+    end
+  end
+
   private
 
   def turn(side)

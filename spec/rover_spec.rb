@@ -32,5 +32,33 @@ describe Rover do
       rover.turn_right
       expect(rover.heading).to eq(:E)
     end
+
+    it "can change directions" do
+      rover.turn_left
+      rover.turn_right
+      expect(rover.confirm_position).to eq '0 0 N'
+    end
+
+    xit "spins around" do
+      rover.turn_left
+      rover.turn_left
+      rover.turn_left
+      rover.turn_left
+      expect(rover.confirm_position).to eq '0 0 N'
+    end
+  end
+
+  describe "#move" do
+    it "can move forwards" do
+      rover.move
+      expect(rover.confirm_position).to eq '0 1 N'
+    end
+
+    it "can move forwards and turn right twice" do
+      rover.move
+      rover.turn_right
+      rover.turn_right
+      expect(rover.confirm_position).to eq '0 1 S'
+    end
   end
 end
