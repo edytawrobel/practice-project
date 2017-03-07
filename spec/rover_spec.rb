@@ -1,5 +1,4 @@
 require 'spec_helper'
-# require 'rover'
 
 describe Rover do
 

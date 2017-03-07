@@ -1,5 +1,4 @@
 require 'spec_helper'
-# require 'operator'
 
 describe Operator do
 
