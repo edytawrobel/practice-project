@@ -83,21 +83,21 @@ For testing run the following command:
   I would like to be able to process the instructions given
 
   As a NASA Operator
-  So that I can change the direction a rover's heading
+  So that I can change the direction a rover's heading towards
   I would like to be able to instruct a rover to spin 90 degrees left or right
-
-  As a NASA Operator,
-  So that I can control a rover,
-  I'd like it to be able to check its current position and location.
 
   As a NASA Operator
   So that I can change the location of a rover
-  I would like to be able to instruct a rover to move one grid forward
+  I would like to be able to instruct a rover to move one step forward
+  
+  As a NASA Operator
+  So that I can control a rover,
+  I'd like it to be able to check its current position
 
-  As a Rover
-  So that I can move effectively within the plateau
-  I would like to be able to execute commands given
-
+  As a NASA Operator
+  So that I can ensure the rovers do not fall off a plateay
+  I would like to restrict their movement when they reach its edge boundaries
+ 
   ```
 
 
@@ -105,10 +105,9 @@ For testing run the following command:
 
 | Messages | Objects |
 |:---------|:--------------|
-| process_instructions | Operator |
-| turn, move, reports location |  Rover |
-| has_plateau, explores(instructions)|  Rover |
-| has max_x and max_y coordinates | Plateau |
+| controll  | Operator |
+| receive(input), turn, move, report position |  Rover |
+| limit on max_x and max_y coordinates | Plateau |
 
 
 * **Building each feature one by one**
