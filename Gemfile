@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-ruby '2.3.3'
+ruby '2.2.3'
 
 group :test do
   gem 'rspec'
@@ -14,3 +14,4 @@ group :development do
 end
 
 gem 'byebug'
+gem 'rspec-rainbow'
