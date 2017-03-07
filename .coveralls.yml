@@ -1,4 +1,1 @@
-service_name: travis-pro
 repo_token: W2GuxVSyNcQwblceoANRl2sfj0cRIWsfe
-
-COVERALLS_PARALLEL=true
