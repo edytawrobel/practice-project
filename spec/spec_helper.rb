@@ -1,8 +1,9 @@
 require 'coveralls'
 require 'simplecov'
 
-SimpleCov.start
 Coveralls.wear!
+
+SimpleCov.start
 
 require './lib/operator'
 require './lib/rover'

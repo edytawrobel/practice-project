@@ -44,7 +44,7 @@ Expected Output:
 
 ### Dependencies
 
-* Written in **Ruby 2.3.3**
+* Written in **Ruby 2.2.3**
 * Tested using **RSpec**
 
 ## Installation
@@ -97,7 +97,7 @@ For testing run the following command:
   I'd like it to be able to check its current position
 
   As a NASA Operator
-  So that I can ensure the rovers do not fall off a plateay
+  So that I can ensure the rovers do not fall off a plateau
   I would like to restrict their movement when they reach its edge boundaries
 
   ```
@@ -107,7 +107,7 @@ For testing run the following command:
 
 | Messages | Objects |
 |:---------|:--------------|
-| controll  | Operator |
+| control  | Operator |
 | receive(input), turn, move, report position |  Rover |
 | limit on max_x and max_y coordinates | Plateau |
 
