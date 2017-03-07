@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'plateau'
+# require 'plateau'
 
 describe Plateau do
   let(:plateau) { described_class.new(width: 5, height: 5) }

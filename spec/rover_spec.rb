@@ -1,8 +1,10 @@
 require 'spec_helper'
-require 'rover'
+# require 'rover'
 
 describe Rover do
-  let(:rover) { described_class.new(x_coord: 0, y_coord: 0, heading: :N) }
+
+  let(:plateau) { double :plateau, width: 5, height: 5 }
+  let(:rover) { described_class.new(x_coord: 0, y_coord: 0, heading: :N, plateau: plateau) }
 
   context "on initialization" do
     it "has x-coordinates" do
@@ -49,7 +51,7 @@ describe Rover do
   end
 
   describe "#move" do
-    it "can move forwards" do
+    it "can move forward" do
       rover.move
       expect(rover.confirm_position).to eq '0 1 N'
     end
