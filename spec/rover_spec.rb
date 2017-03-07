@@ -39,7 +39,7 @@ describe Rover do
       expect(rover.confirm_position).to eq '0 0 N'
     end
 
-    xit "spins around" do
+    it "spins around" do
       rover.turn_left
       rover.turn_left
       rover.turn_left

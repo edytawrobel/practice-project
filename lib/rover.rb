@@ -34,7 +34,7 @@ class Rover
 
   def turn(side)
      index = COMPASS.find_index(@heading)
-     return COMPASS[index + 1] if side == 'left'
-     return COMPASS[index - 1] if side == 'right'
+     return COMPASS[(index - 1) % 4] if side == 'right'
+     return COMPASS[(index + 1) % 4] if side == 'left'
   end
 end
