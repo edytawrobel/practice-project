@@ -15,23 +15,4 @@ class Operator
     @plateau = plateau
   end
 
-  def receive(commands)
-    commands.each_char { |command| send command }
-  end
-
-  private
-
-  def send(command)
-    case command
-    when "L"
-      current_rover.turn_left
-    when "R"
-      current_rover.turn_right
-    when "M"
-      current_rover.move
-    else
-      puts "Invalid character in the move sequence!"
-      exit
-    end
-  end
 end
