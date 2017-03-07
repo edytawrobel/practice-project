@@ -21,12 +21,8 @@ class Rover
   end
 
   def move
-    if coordinates_valid? && heading_valid?
-      step_forward
-      confirm_position
-    else
-      puts "invalid commands"
-    end
+    step_forward
+    confirm_position
   end
 
   def confirm_position
@@ -34,6 +30,8 @@ class Rover
   end
 
   private
+
+  attr_reader :plateau
 
   def turn(side)
      index = COMPASS.find_index(@heading)
@@ -43,19 +41,10 @@ class Rover
 
   def step_forward
     case @heading
-    when :N then @y_coord +=  1
-    when :S then @y_coord += -1
-    when :E then @x_coord +=  1
-    when :W then @x_coord += -1
+    when :N then @y_coord +=  1 if @y_coord < @plateau.height
+    when :S then @y_coord -=  1 if @y_coord > 0
+    when :E then @x_coord +=  1 if @x_coord < @plateau.width
+    when :W then @x_coord -=  1 if @x_coord > 0
     end
   end
-
-  def coordinates_valid?
-    x_coord.between?(0, @plateau.width) && y_coord.between?(0, @plateau.height)
-  end
-
-  def heading_valid?
-    COMPASS.include?(heading)
-  end
-
 end
