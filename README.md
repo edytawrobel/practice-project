@@ -1,4 +1,4 @@
-Problem : Mars Rover
+Problem: Mars Rover
 
 [![Coverage Status](https://coveralls.io/repos/github/edytawrobel/practice-project/badge.svg?branch=master)](https://coveralls.io/github/edytawrobel/practice-project?branch=master)
 
@@ -58,14 +58,14 @@ bundle install
 
 For testing run the following command:
 
-``` rspec ```
-
+```
+rspec
+```
 
 ### How to Run the App
 
 ```
 ruby run.rb
-
 ```
 
 ### Steps in my development process
@@ -96,26 +96,28 @@ ruby run.rb
   As a NASA Operator
   So that I can ensure the rovers do not fall off a plateau
   I would like to restrict their movement when they reach its edge boundaries
-
   ```
+
 ### Developed Domain Model:
 
 | Messages | Objects |
 |:---------|:--------------|
-| control  | Operator |
-| receive(input), turn, move, report position |  Rover |
-| limit on max_x and max_y coordinates | Plateau |
+| control, process instructions | Operator |
+| turn, move, report position |  Vehicle |
+| provide surface to land on, (width, height) | Surface |
 
 
 * **Building each feature one by one**
-  * Wrote unit test
-  * Tested - RED
+
+  * Write unit test
+  * Test      - RED
   * Code
-  * Tested - GREEN
-  * Refactored
+  * Test    - GREEN
+  * Refactor
+  * Test the whole application with feature tests
 
 ### Ideas for extension
 
-Below is a list of ideas that would have been nice to implement in future:
+Below is a list of ideas that could be implemented in future:
 * **XX**
 * **XX**
