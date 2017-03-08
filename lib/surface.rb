@@ -1,4 +1,4 @@
-class Plateau
+class Surface
 
   attr_reader :width, :height
 

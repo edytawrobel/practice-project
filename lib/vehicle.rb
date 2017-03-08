@@ -1,6 +1,6 @@
-class Rover
+class Vehicle
 
-  attr_accessor :x_coord, :y_coord, :heading, :plateau
+  attr_accessor :x_coord, :y_coord, :heading, :surface
 
   COMPASS = [:N, :W, :S, :E]
 
@@ -8,7 +8,7 @@ class Rover
     @x_coord = args[:x_coord]
     @y_coord = args[:y_coord]
     @heading = args[:heading]
-    @plateau = args[:plateau]
+    @surface = args[:surface]
   end
 
   def establish_location
@@ -41,9 +41,9 @@ class Rover
 
   def step_forward
     case @heading
-    when :N then @y_coord +=  1 if @y_coord < plateau.height
+    when :N then @y_coord +=  1 if @y_coord < surface.height
     when :S then @y_coord -=  1 if @y_coord > 0
-    when :E then @x_coord +=  1 if @x_coord < plateau.width
+    when :E then @x_coord +=  1 if @x_coord < surface.width
     when :W then @x_coord -=  1 if @x_coord > 0
     end
   end

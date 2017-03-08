@@ -42,7 +42,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/rovers/lib/rover.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/lib/vehicle.rb": [
         1,
         null,
         1,
@@ -94,7 +94,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/rovers/lib/plateau.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/lib/surface.rb": [
         1,
         null,
         1,
@@ -189,7 +189,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/rovers/spec/plateau_spec.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/spec/surface_spec.rb": [
         1,
         null,
         1,
@@ -206,7 +206,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/rovers/spec/rover_spec.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/spec/vehicle_spec.rb": [
         1,
         null,
         1,
@@ -289,6 +289,6 @@
         null
       ]
     },
-    "timestamp": 1489012901
+    "timestamp": 1489013528
   }
 }
