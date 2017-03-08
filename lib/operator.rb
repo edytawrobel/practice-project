@@ -20,7 +20,7 @@ class Operator
   end
 
   def get_position
-    self.current_vehicle.confirm_position
+    self.current_vehicle.establish_location
   end
 
   private

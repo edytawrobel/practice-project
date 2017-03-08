@@ -15,7 +15,7 @@ describe 'Features' do
     expect(operator.current_vehicle.heading).to eq(:N)
     operator.process_input('LMLMLMLMM')
     operator.get_position
-    expect(operator.current_vehicle.confirm_position).to eq '1 3 N'
+    expect(operator.current_vehicle.establish_location).to eq '1 3 N'
   end
 
   it 'controller can deploy the second rover' do
@@ -31,6 +31,6 @@ describe 'Features' do
     expect(operator.current_vehicle.heading).to eq(:E)
     operator.process_input('MMRMMRMRRM')
     operator.get_position
-    expect(operator.current_vehicle.confirm_position).to eq '5 1 E'
+    expect(operator.current_vehicle.establish_location).to eq '5 1 E'
   end
 end
