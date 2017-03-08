@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/edytawrobel/Repos/week10/mars-rover/lib/operator.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/lib/operator.rb": [
         1,
         null,
         1,
@@ -21,10 +21,11 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/mars-rover/lib/rover.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/lib/rover.rb": [
         1,
         null,
         1,
+        null,
         1,
         null,
         1,
@@ -53,7 +54,6 @@
         null,
         1,
         12,
-        null,
         null,
         null,
         1,
@@ -85,7 +85,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/mars-rover/lib/plateau.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/lib/plateau.rb": [
         1,
         null,
         1,
@@ -96,7 +96,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/mars-rover/spec/operator_spec.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/spec/operator_spec.rb": [
         1,
         null,
         1,
@@ -120,7 +120,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/mars-rover/spec/plateau_spec.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/spec/plateau_spec.rb": [
         1,
         null,
         1,
@@ -137,7 +137,7 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/mars-rover/spec/rover_spec.rb": [
+      "/Users/edytawrobel/Repos/week10/rovers/spec/rover_spec.rb": [
         1,
         null,
         1,
@@ -242,6 +242,6 @@
         null
       ]
     },
-    "timestamp": 1488900863
+    "timestamp": 1488992604
   }
 }

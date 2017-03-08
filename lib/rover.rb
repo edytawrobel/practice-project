@@ -1,6 +1,7 @@
 class Rover
 
   attr_accessor :x_coord, :y_coord, :heading, :plateau
+
   COMPASS = [:N, :W, :S, :E]
 
   def initialize(args)
@@ -31,20 +32,19 @@ class Rover
     "#{@x_coord} #{@y_coord} #{@heading}"
   end
 
-
   private
 
   def turn(side)
-     index = COMPASS.find_index(@heading)
-     return COMPASS[(index - 1) % 4] if side == 'right'
-     return COMPASS[(index + 1) % 4] if side == 'left'
+    index = COMPASS.find_index(@heading)
+    return COMPASS[(index - 1) % 4] if side == 'right'
+    return COMPASS[(index + 1) % 4] if side == 'left'
   end
 
   def step_forward
-    case @heading
-    when :N then @y_coord +=  1 if @y_coord < @plateau.height
+    case heading
+    when :N then @y_coord +=  1 if @y_coord < plateau.height
     when :S then @y_coord -=  1 if @y_coord > 0
-    when :E then @x_coord +=  1 if @x_coord < @plateau.width
+    when :E then @x_coord +=  1 if @x_coord < plateau.width
     when :W then @x_coord -=  1 if @x_coord > 0
     end
   end

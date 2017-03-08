@@ -18,11 +18,9 @@ The first line of input is the upper-right coordinates of the plateau, the lower
 The rest of the input is information pertaining to the rovers that have been deployed. Each rover has two lines of input. The first line gives the rover’s position, and the second line is a series of instructions telling the rover how to explore the plateau.
 The position is made up of two integers and a letter separated by spaces, corresponding to the x and y co-ordinates and the rover’s orientation.
 Each rover will be finished sequentially, which means that the second rover won’t start to move until the first one has finished moving.
-     Output: The output for each rover should be its final co-ordinates and heading.
+Output: The output for each rover should be its final co-ordinates and heading.
 
-
-
-     Input and Output
+Input and Output
 
 Test Input:
 
@@ -49,11 +47,11 @@ Expected Output:
 
 ## Installation
 
-- unzip 'mars_rover.zip'
+- unzip 'rovers.zip'
 - in the terminal:
 
 ```
-cd mars_rover
+cd rovers
 gem install bundler
 bundle install
 ```
@@ -65,11 +63,14 @@ For testing run the following command:
 
 ### How to Run the App
 
+```
+pry
+- you should expect to see the output in your console
+- you should also be able to find the 'output.txt' file in the rovers' folder with the correct output
+
+irb run.rb
 
 ```
-
-```
-
 
 ### Steps in my development process
 
@@ -78,11 +79,11 @@ For testing run the following command:
   ```
   As a NASA Operator
   So that I can proceed with the mission
-  I would like to land rovers on plateau
+  I would like to land rovers on the plateau of Mars
 
   As a NASA Operator
   So that I can control a rover
-  I would like to be able to process the instructions given
+  I would like to be able to send out the instructions given
 
   As a NASA Operator
   So that I can change the direction a rover's heading towards
@@ -93,7 +94,7 @@ For testing run the following command:
   I would like to be able to instruct a rover to move one step forward
 
   As a NASA Operator
-  So that I can control a rover,
+  So that I can control a rover
   I'd like it to be able to check its current position
 
   As a NASA Operator
@@ -101,8 +102,6 @@ For testing run the following command:
   I would like to restrict their movement when they reach its edge boundaries
 
   ```
-
-
 ### Developed Domain Model:
 
 | Messages | Objects |
@@ -121,6 +120,6 @@ For testing run the following command:
 
 ### Ideas for extension
 
-Below is a list of ideas that would have been nice to implement with more time:
+Below is a list of ideas that would have been nice to implement in future:
 * **XX**
 * **XX**
