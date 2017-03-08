@@ -64,11 +64,7 @@ For testing run the following command:
 ### How to Run the App
 
 ```
-pry
-- you should expect to see the output in your console
-- you should also be able to find the 'output.txt' file in the rovers' folder with the correct output
-
-irb run.rb
+ruby run.rb
 
 ```
 
