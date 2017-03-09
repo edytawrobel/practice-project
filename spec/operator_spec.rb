@@ -21,24 +21,40 @@ describe Operator do
   end
 
   context "processing input LRM" do
-    before :each do
-      operator.get_surface(surface)
-      operator.deploy(vehicle)
+
+    describe "unsuccessfull operation" do
+      it 'cannot operate if there is no surface' do
+        operator.deploy(vehicle)
+        expect { operator.process_input('LMLMLMLMM') }.to raise_error 'Cannot proceed: no vehicle or no surface'
+      end
+
+      it 'cannot operate if there is no vehicle' do
+        operator.get_surface(surface)
+        expect { operator.process_input('LMLMLMLMM') }.to raise_error 'Cannot proceed: no vehicle or no surface'
+      end
     end
 
-    it "instructs a rover to turn left" do
-      allow(vehicle).to receive(:turn_left)
-      operator.process_input('L')
-    end
+    describe "successfull operation" do
 
-    it "instructs a rover to turn right" do
-      allow(vehicle).to receive(:turn_right)
-      operator.process_input('R')
-    end
+      before :each do
+        operator.get_surface(surface)
+        operator.deploy(vehicle)
+      end
 
-    it "instructs a rover to move forward" do
-      allow(vehicle).to receive(:move)
-      operator.process_input('M')
+      it "instructs a rover to turn left" do
+        allow(vehicle).to receive(:turn_left)
+        operator.process_input('L')
+      end
+
+      it "instructs a rover to turn right" do
+        allow(vehicle).to receive(:turn_right)
+        operator.process_input('R')
+      end
+
+      it "instructs a rover to move forward" do
+        allow(vehicle).to receive(:move)
+        operator.process_input('M')
+      end
     end
   end
 end
