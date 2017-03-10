@@ -4,19 +4,13 @@ describe Operator do
 
     let(:operator) { described_class.new() }
     let(:surface) { double :surface }
-    let(:vehicle) { double :vehicle }
+    let(:vehicle) { double :vehicle, surface: surface }
 
   describe '#deploy' do
     it 'can operate a vehicle' do
       operator.deploy(vehicle)
       expect(operator.current_vehicle).to eq vehicle
-    end
-  end
-
-  describe '#get_surface' do
-    it 'is on a surface' do
-      operator.get_surface(surface)
-      expect(operator.current_surface).to eq surface
+      expect(operator.current_vehicle.surface).to eq surface
     end
   end
 
@@ -24,20 +18,13 @@ describe Operator do
 
     describe 'unsuccessfull operation' do
       it 'cannot operate if there is no surface' do
-        operator.deploy(vehicle)
-        expect { operator.process_input('LMLMLMLMM') }.to raise_error 'Cannot proceed: no vehicle or no surface'
-      end
-
-      it 'cannot operate if there is no vehicle' do
-        operator.get_surface(surface)
-        expect { operator.process_input('LMLMLMLMM') }.to raise_error 'Cannot proceed: no vehicle or no surface'
+        expect { operator.process_input('LMLMLMLMM') }.to raise_error 'Cannot proceed: deploy vehicle first!'
       end
     end
 
     describe 'successfull operation' do
 
       before :each do
-        operator.get_surface(surface)
         operator.deploy(vehicle)
       end
 

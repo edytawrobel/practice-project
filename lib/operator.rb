@@ -1,14 +1,9 @@
 class Operator
 
-  attr_reader :current_vehicle, :current_surface
+  attr_reader :current_vehicle
 
   def initialize
-    @current_surface ||= nil
     @current_vehicle ||= nil
-  end
-
-  def get_surface(surface)
-    @current_surface = surface
   end
 
   def deploy(vehicle)
@@ -16,7 +11,7 @@ class Operator
   end
 
   def process_input(commands)
-    raise 'Cannot proceed: no vehicle or no surface' unless operation_ready?
+    raise 'Cannot proceed: deploy vehicle first!' unless vehicle_ready?
     commands.each_char { |command| send command }
   end
 
@@ -26,8 +21,8 @@ class Operator
 
   private
 
-  def operation_ready?
-    @current_surface != nil && @current_vehicle != nil
+  def vehicle_ready?
+    @current_vehicle != nil
   end
 
   def send(command)
