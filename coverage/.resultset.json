@@ -110,44 +110,6 @@
         null,
         null
       ],
-      "/Users/edytawrobel/Repos/week10/rovers/spec/features/feature_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/edytawrobel/Repos/week10/rovers/spec/operator_spec.rb": [
         1,
         null,
@@ -255,6 +217,7 @@
         null,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -310,6 +273,6 @@
         null
       ]
     },
-    "timestamp": 1489078245
+    "timestamp": 1489161172
   }
 }

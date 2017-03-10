@@ -16,7 +16,7 @@ class Operator
   end
 
   def process_input(commands)
-    raise 'Cannot proceed: no vehicle or no surface' unless operation_ready
+    raise 'Cannot proceed: no vehicle or no surface' unless operation_ready?
     commands.each_char { |command| send command }
   end
 
@@ -26,7 +26,7 @@ class Operator
 
   private
 
-  def operation_ready
+  def operation_ready?
     @current_surface != nil && @current_vehicle != nil
   end
 
