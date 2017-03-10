@@ -90,11 +90,11 @@ ruby run.rb
 
   As a NASA Operator
   So that I can change the location of a rover
-  I would like to be able to instruct a rover to move one step forward
+  I would like to be able to instruct a rover to move one grid forward
 
   As a NASA Operator
-  So that I can control a rover
-  I'd like it to be able to check its current position
+  So that I can ensure a rover does not get lost
+  I'd like it to be able to check its current location
 
   As a NASA Operator
   So that I can ensure the rovers do not fall off a plateau
