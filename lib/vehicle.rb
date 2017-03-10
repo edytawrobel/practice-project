@@ -34,9 +34,9 @@ class Vehicle
   end
 
   def turn(side)
-    index = COMPASS.find_index(@heading)
-    return COMPASS[(index + 1) % 4] if side == 'right'
-    return COMPASS[(index - 1) % 4] if side == 'left'
+    heading = COMPASS.find_index(@heading)
+    return COMPASS[(heading + 1) % 4] if side == 'right'
+    return COMPASS[(heading - 1) % 4] if side == 'left'
   end
 
   def step_forward
