@@ -11,7 +11,7 @@ class Operator
   end
 
   def process_input(commands)
-    raise 'Cannot proceed: deploy vehicle first!' unless vehicle_ready?
+    raise 'Cannot proceed: deploy vehicle first!' unless vehicle_deployed?
     commands.each_char { |command| send command }
   end
 
@@ -21,7 +21,7 @@ class Operator
 
   private
 
-  def vehicle_ready?
+  def vehicle_deployed?
     @current_vehicle != nil
   end
 
