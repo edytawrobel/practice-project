@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Features' do
 
-  it 'controller can deploy the first vehicle' do
+  it 'operator can deploy the first vehicle' do
     operator = Operator.new
     surface = Surface.new(width: 5, height: 5)
     vehicle = Vehicle.new(x_coord: 1, y_coord: 2, heading: :N, surface: surface)
@@ -18,7 +18,7 @@ describe 'Features' do
     expect(operator.current_vehicle.establish_location).to eq '1 3 N'
   end
 
-  it 'controller can deploy the second vehicle' do
+  it 'operator can deploy the second vehicle' do
     operator = Operator.new
     surface = Surface.new(width: 5, height: 5)
     vehicle = Vehicle.new(x_coord: 3, y_coord: 3, heading: :E, surface: surface)

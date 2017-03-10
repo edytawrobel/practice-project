@@ -23,9 +23,10 @@ describe Vehicle do
     end
   end
 
-  it 'can return its own coordinates and heading' do
-    expect(vehicle.establish_location).to eq '0 0 N'
-
+  describe 'starting position' do
+    it 'can return its own coordinates and heading' do
+      expect(vehicle.establish_location).to eq '0 0 N'
+    end
   end
 
   context 'turning sides' do
@@ -70,7 +71,7 @@ describe Vehicle do
       expect(vehicle.establish_location).to eq '0 1 N'
     end
 
-    it 'can move forwards and turn right twice' do
+    it 'can move forward and turn right twice' do
       vehicle.move
       vehicle.turn_right
       vehicle.turn_right

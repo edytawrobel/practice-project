@@ -1,3 +1,5 @@
 --color
---require spec_helper
--fd
+--format documentation
+--no-profile
+--no-fail-fast
+--order defined

@@ -1,8 +1,13 @@
-Problem: Mars Rover
 
 [![Coverage Status](https://coveralls.io/repos/github/edytawrobel/practice-project/badge.svg?branch=master)](https://coveralls.io/github/edytawrobel/practice-project?branch=master)
 
 [![Build Status](https://travis-ci.org/edytawrobel/practice-project.svg?branch=master)](https://travis-ci.org/edytawrobel/practice-project)
+
+Problem: Mars Rover
+===================
+
+Instructions:
+=============
 
 A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau, which is curiously rectangular, must be navigated by the rovers so that their on-board cameras can get a complete view of the surrounding terrain to send back to Earth.
 
@@ -27,11 +32,9 @@ Test Input:
 5 5
 
 1 2 N
-
 LMLMLMLMM
 
 3 3 E
-
 MMRMMRMRRM
 
 Expected Output:
@@ -47,7 +50,7 @@ Expected Output:
 
 ## Installation
 
-- unzip 'rovers.zip'
+- unzip 'rovers.zip' folder
 - in the terminal:
 
 ```
@@ -56,7 +59,7 @@ gem install bundler
 bundle install
 ```
 
-For testing run the following command:
+## See tests' results
 
 ```
 rspec
@@ -79,7 +82,7 @@ ruby run.rb
 
   As a NASA Operator
   So that I can control a rover
-  I would like to be able to send out the instructions given
+  I would like to be able to process the instructions given
 
   As a NASA Operator
   So that I can change the direction a rover's heading towards
@@ -98,16 +101,22 @@ ruby run.rb
   I would like to restrict their movement when they reach its edge boundaries
   ```
 
-### Developed Domain Model:
+#### Developed Domain Model:
 
 | Messages | Objects |
 |:---------|:--------------|
 | control, process instructions | Operator |
 | turn, move, report position |  Vehicle |
-| provide surface to land on, (width, height) | Surface |
+| width, height | Surface |
+
+#### Responsibilities of each model:
+
+1. Vehicle - responsible for moving in various directions on a certain surface
+2. Operator - responsible for processing the input given, controlling the vehicles
+3. Surface - provides a surface to land on, limited by its width and hight
 
 
-* **Building each feature one by one**
+#### Building each feature one by one
 
   * Write unit test
   * Test      - RED
@@ -116,8 +125,26 @@ ruby run.rb
   * Refactor
   * Test the whole application with feature tests
 
-### Ideas for extension
+### Approach to the problem
+
+I aimed to design an easy to understand, flexible, modular and reusable CLI following the principles of OOD and TDD:
+
+1. Classes are no longer than one hundred lines of code
+2. Methods are no longer than five lines of code
+3. No more than four parameters are passed into a method
+4. Hash options are parameters
+5. SOLID
+6. DRY
+7. Follows the Law of Demeter (LoD)
+8. Tested (unit level, feature level)
+
+Program can deploy vehicles on a certain surface and return their final location.
+Operator is responsible for processing the given string input. It then instructs the vehicle to move forward or turn. It can report back the current location of the vehicle.
+
+Vehicle is a standalone class, it does not depend on its operator, it could be used in a completely different context. Hence, the name. It moves through a grid aligned to the cardinal compass points, but if needed these two could be decoupled easily.
+
+#### Ideas for extension
 
 Below is a list of ideas that could be implemented in future:
-* **XX**
-* **XX**
+
+* At the moment, surface is merely a data object (code smell!) as it does not have any behaviour. However, who knows if in future our client won't get back to us asking to add some functionality, like recording on a map the current position of a vehicle. I decided to keep it as is with this future in mind.
